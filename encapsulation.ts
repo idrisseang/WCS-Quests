@@ -10,4 +10,8 @@ class BankCustomer{
     public getName(): string {
         return this.name;
     }
+
+    public verifyPinInput(code : string) : boolean {
+        return code ? this.secretCBCode === code : false;
+    }
 }
