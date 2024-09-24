@@ -1,10 +1,20 @@
-    <article class="myArticle">
-        <h1>Utiliser Filter en JS</h1>
-        <p>
-            La méthode filter() en JavaScript permet de créer un nouveau tableau 
-            contenant uniquement les éléments qui remplissent une condition spécifique. 
-            Elle s'applique aux tableaux et prend une fonction de rappel (callback) en argument. 
-            Cette fonction de rappel est exécutée pour chaque élément du tableau d'origine, 
-            et si elle renvoie true, l'élément est inclus dans le nouveau tableau.
-        </p>
+<section>
+    <article class="myArticle" *ngIf="article.isPublished">
+        <img [src]="article.image" alt="lenovo pcs">
+        <h1>{{ article.title }}</h1>
+        <div class="content">
+            <p class="caption"> Publié par : {{article.author}}</p>
+            <p>{{ article.content }}</p>
+        </div>
     </article>
+    <button (click)="togglePublication()" >{{article.isPublished ? "Dépublier" : "Publier"}}</button>
+
+    <div class="comment">
+        <label for="comment">Laissez un commentaire sur l'article</label>
+        <input type="text" [(ngModel)]="article.comment">
+    </div>
+    <div class="article__comments">
+        <h4>Commentaires : 👇</h4>
+        <p>{{article.comment}}</p>
+    </div>
+</section>
