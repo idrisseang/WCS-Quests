@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@types/assert": "^1.5.10",
+    "assert": "^2.1.0"
+  }
+}
