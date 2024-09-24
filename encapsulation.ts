@@ -6,4 +6,8 @@ class BankCustomer{
         this.name = name;
         this.secretCBCode = secretCBCode;
     }
+
+    public getName(): string {
+        return this.name;
+    }
 }
