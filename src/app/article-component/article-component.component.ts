@@ -29,7 +29,12 @@ export class ArticleComponentComponent {
       comment: ''
     };
 
+    isAdmin: boolean = true;
+
     togglePublication(): void {
       this.article.isPublished = !this.article.isPublished;
+    }
+    toggleIsAdmin() : void {
+      this.isAdmin = !this.isAdmin;
     }
 }

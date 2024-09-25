@@ -17,4 +17,14 @@
         <h4>Commentaires : 👇</h4>
         <p>{{article.comment}}</p>
     </div>
+
+    <div>
+        <p>------------- Quête sur les directives ----------</p>
+        <h2 [ngClass]="{'red' : isAdmin}">Bonjour les gens !</h2>
+        <button (click)="toggleIsAdmin()">Toggle isAdmin</button>
+        <div class="buttons">
+            <button>View</button>
+            <button *ngIf="isAdmin">Edit</button>
+        </div>
+    </div>
 </section>
