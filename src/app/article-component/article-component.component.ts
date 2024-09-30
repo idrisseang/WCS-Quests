@@ -20,6 +20,7 @@ type Article = {
   styleUrl: './article-component.component.scss'
 })
 export class ArticleComponentComponent {
+
     article : Article = {
       title: 'Yoga, IdeaPad : Lenovo fait le plein de nouveaux PC',
       author: 'Thomas Estimbre',
@@ -28,13 +29,4 @@ export class ArticleComponentComponent {
       isPublished: true,
       comment: ''
     };
-
-    isAdmin: boolean = true;
-
-    togglePublication(): void {
-      this.article.isPublished = !this.article.isPublished;
-    }
-    toggleIsAdmin() : void {
-      this.isAdmin = !this.isAdmin;
-    }
 }
