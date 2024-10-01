@@ -3,8 +3,12 @@
       <span class="emoji">🦁</span>
       <h1> {{ title }}</h1>
     </div>
-    <section class="articles">
+    <section>
       <h3>Mes articles</h3>
-      <app-article-component></app-article-component>
+      <div class="articles">
+        @for(article of articles; track $index) {
+          <app-article [article]="article"></app-article>
+        }
+      </div>
     </section>
 </main>

@@ -1,0 +1,13 @@
+
+@if(article){
+    <article class="myArticle">
+        <div>
+            <img [src]="article.image" alt="techno logo">
+            <h1>{{ article.title }}</h1>
+        </div>
+        <div class="content">
+            <p class="caption"> Publié par : {{article.author}}</p>
+            <p>{{ article.content }}</p>
+        </div>
+    </article>
+}

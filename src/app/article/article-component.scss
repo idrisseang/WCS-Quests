@@ -1,0 +1,38 @@
+.myArticle {
+    border: 1px solid gray;
+    border-radius: 12px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+article {
+    height: 100%;
+}
+
+.myArticle h1 {
+    text-align: center;
+    color: rgb(213, 124, 76);
+}
+
+.myArticle p {
+    line-height: 2;
+}
+
+.myArticle img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px 12px 0 0;
+}
+
+.myArticle .content {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.myArticle .content .caption {
+    color: #3f3f46;
+    font-size: small;
+    font-weight: bold;
+    font-style: italic;
+}
