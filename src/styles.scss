@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    font-family: 'Inter';
+}
+
+.location__item {
+    font-size: small;
+    background-color: rgb(174, 231, 233);
+    width: fit-content;
+    height: auto;
+    padding: 8px;
+    border-radius: 4px;
+
+}
+
+button {
+    padding: 8px;
+    font-weight: bold;
+    border-radius: 4px;
+    align-self: center;
+    border:none;
+    outline: none;
+    margin-bottom: 8px;
+    color: white;
+    background-color: #19191c;
+    cursor: pointer;
+}

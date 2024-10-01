@@ -3,12 +3,13 @@
       <span class="emoji">🦁</span>
       <h1> {{ title }}</h1>
     </div>
-    <section>
+    <router-outlet></router-outlet>
+    <!--<section>
       <h3>Mes articles</h3>
       <div class="articles">
         @for(article of articles; track $index) {
           <app-article [article]="article"></app-article>
         }
-      </div>
-    </section>
+      </div> 
+    </section> !-->
 </main>

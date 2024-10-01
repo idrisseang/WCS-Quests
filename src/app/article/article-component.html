@@ -3,11 +3,14 @@
     <article class="myArticle">
         <div>
             <img [src]="article.image" alt="techno logo">
-            <h1>{{ article.title }}</h1>
+            <h3>{{ article.title }}</h3>
         </div>
         <div class="content">
-            <p class="caption"> Publié par : {{article.author}}</p>
-            <p>{{ article.content }}</p>
+            <p class="caption"> By : {{article.author}}</p>
+            <p>{{ article.content | slice: 0 : 50 }}...</p>
         </div>
+        <button [routerLink]="['/article', article.id]">
+            see more
+        </button>
     </article>
 }

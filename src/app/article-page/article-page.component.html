@@ -1,0 +1,13 @@
+
+    <p class="location__item">article detail page</p>
+    <button [routerLink]="['']" >Go back home</button>
+@if(this.selectedArticle) {
+    <section class="selectedArticle">
+        <img [src]="this.selectedArticle.image" alt="flemme">
+        <h3>{{this.selectedArticle.title}}</h3>
+        <em>Author : {{this.selectedArticle.author}}</em>
+        <p class="content">{{this.selectedArticle.content}}</p>
+    </section>
+}
+
+

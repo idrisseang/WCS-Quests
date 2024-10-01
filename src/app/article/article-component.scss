@@ -1,17 +1,20 @@
 .myArticle {
     border: 1px solid gray;
     border-radius: 12px;
-    width: 400px;
+    width: 240px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
+    
 }
 article {
     height: 100%;
 }
 
-.myArticle h1 {
+.myArticle h3 {
     text-align: center;
+    font-size: medium;
     color: rgb(213, 124, 76);
 }
 
@@ -21,7 +24,8 @@ article {
 
 .myArticle img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    max-height: 120px;
     border-radius: 12px 12px 0 0;
 }
 
@@ -35,4 +39,10 @@ article {
     font-size: small;
     font-weight: bold;
     font-style: italic;
+}
+
+
+a{
+    text-decoration: none;
+    color: inherit;
 }
