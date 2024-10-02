@@ -1,0 +1,58 @@
+<form #contactForm="ngForm" (ngSubmit)="contactForm.valid && onFormSubmit()">
+    <fieldset>
+        @if(contactForm.submitted){
+            <app-error [control]="firstname"></app-error>
+        }
+        <label for="firstname">Firstname</label>
+
+        <input 
+        type="text" 
+        name="firstname" 
+        id="firstname" 
+        [(ngModel)]="contact.firstname" 
+        #firstname="ngModel" 
+        placeholder="your firstname here..."
+        required 
+        minlength={{MIN_LENGTH}}
+        maxlength={{MAX_LENGTH}} 
+        >
+
+    </fieldset>
+    <fieldset>
+        @if(contactForm.submitted){
+            <app-error [control]="lastname"></app-error>
+        }
+        <label for="lastname">Lastname</label>
+        <input 
+        type="text" 
+        name="lastname" 
+        id="lastname" 
+        [(ngModel)]="contact.lastname" 
+        required 
+        placeholder="your lastname here..."
+        #lastname="ngModel"
+        minlength={{MIN_LENGTH}}
+        maxlength={{MAX_LENGTH}}>
+    </fieldset>
+    <fieldset>
+        @if(contactForm.submitted){
+            <app-error [control]="email"></app-error>
+        }
+        
+        <label for="email">Email</label>
+        <input 
+        type="email" 
+        name="email" 
+        id="email" 
+        email
+        placeholder="you@example.com"
+        required 
+        #email="ngModel"
+        [(ngModel)]="contact.email">
+    </fieldset>
+    <div class="buttons">
+        <button type="submit">send</button>
+        <button type="reset">reset</button>
+    </div>
+
+</form>

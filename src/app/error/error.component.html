@@ -1,0 +1,22 @@
+@if(control && control.invalid){
+    <div class="errors">
+        @if(control.errors){
+            @if(control.errors['required']){
+                <p class="error">❌ {{control.name}} is required </p>
+            }
+
+            @if(control.errors['minlength']){
+                <p class="error">❌ {{control.name}} must contain at least 2 characters.</p>
+            }
+
+            @if(control.errors['maxlength']){
+                <p class="error"> ❌ {{control.name}} must not exceed 15 characters.</p>
+            }
+
+            @if(control.name ==="email"){
+                <p class="error">❌ invalid email</p>
+            }
+        }
+    </div>
+}
+
