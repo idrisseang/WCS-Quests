@@ -3,7 +3,7 @@
     <h3>My articles</h3>
     <div class="articles">
     @for(article of articles; track $index) {
-        <app-article [article]="article"></app-article>
+        <app-article [article]="article" (onTouchLike)="displayArticleTitle($event)"></app-article>
     }
     </div> 
 </section>

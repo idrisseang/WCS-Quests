@@ -9,8 +9,11 @@
             <p class="caption"> By : {{article.author}}</p>
             <p>{{ article.content | slice: 0 : 50 }}...</p>
         </div>
-        <button [routerLink]="['/article', article.id]">
-            see more
-        </button>
+        <div class="buttons">
+            <button [routerLink]="['/article', article.id]">
+                see more
+            </button>
+            <button (click)="sendArticleTitle(article.title)">smash like 👍</button>
+        </div>
     </article>
 }

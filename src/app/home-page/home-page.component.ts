@@ -15,4 +15,9 @@ export class HomePageComponent {
   articleData: ArticleDataService = new ArticleDataService();
   articles: Article[] = this.articleData.articles;
     
+  constructor(){}
+
+  displayArticleTitle(title: string): void {
+    alert(`✅L'article ${title} a été liké !`);
+  }
 }

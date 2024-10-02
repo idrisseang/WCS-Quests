@@ -14,6 +14,13 @@ import { RouterLink } from '@angular/router';
 })
 export class ArticleComponent {
   @Input() article: Article | null = null;
+  @Output() onTouchLike: EventEmitter<string> = new EventEmitter();
+
+  constructor(){}
+
+  sendArticleTitle(title: string): void {
+    this.onTouchLike.emit(title);
+  }
 
 }
 
